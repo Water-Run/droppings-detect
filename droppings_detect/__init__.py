@@ -8,4 +8,3 @@ r"""
 from droppings_detect.result import Result
 import droppings_detect.image as image
 import droppings_detect.video as video
-from droppings_detect.config import Config

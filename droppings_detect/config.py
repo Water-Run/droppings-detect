@@ -1,36 +1,17 @@
 r"""
 :author: WaterRun
-:time: 2025-05-06
-:file: image.py
+:time: 2025-05-10
+:file: config.py
 :description: 排泄物检测配置
 """
 
+import os
 
-class Config:
-    r"""
-    配置
-    """
+# 默认模型路径（在包内model目录）
+DEFAULT_MODEL_PATH = os.path.join(os.path.dirname(__file__), "model", "best.pt")
 
-    @staticmethod
-    def get_model() -> str:
-        r"""
-        返回模型路径
-        :return: 模型路径
-        """
-        return ""
+# 检测阈值
+CONFIDENCE_THRESHOLD = 0.5
 
-    @staticmethod
-    def get_config() -> dict:
-        r"""
-        返回配置
-        :return: 配置
-        """
-        return {}
-
-    @staticmethod
-    def show() -> None:
-        r"""
-        输出配置
-        :return: None
-        """
-        print(f"")
+# 处理图像时的默认大小
+IMAGE_SIZE = 640
